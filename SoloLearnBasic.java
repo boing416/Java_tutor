@@ -427,6 +427,90 @@ class MyClass {
   }
 }
 
+/*************   Types of Exceptions **************************************************************************/
+public class MyClass {
+  public static void main(String[ ] args) {
+    try {
+      Thread.sleep(1000);
+    } catch (InterruptedException e) {
+      //some code
+    }
+  }
+}
+/*************   ArrayList **************************************************************************/
+import java.util.ArrayList;
+//...
+ArrayList colors = new ArrayList();
+
+ArrayList<String> colors = new ArrayList<String>(10);
+
+//Example 2
+
+import java.util.ArrayList;
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    ArrayList<String> colors = new ArrayList<String>();
+    colors.add("Red");
+    colors.add("Blue");
+    colors.add("Green");
+    colors.add("Orange");
+    colors.remove("Green");
+
+    System.out.println(colors);
+  }
+}
+// Output: [Red, Blue, Orange]
+
+/*************   LinkedList **************************************************************************/
+
+import java.util.LinkedList;
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    LinkedList<String> c = new LinkedList<String>();
+    c.add("Red");
+    c.add("Blue");
+    c.add("Green");
+    c.add("Orange");
+    c.remove("Green");
+    System.out.println(c);
+  }
+}
+// Outputs [Red, Blue, Orange]
+
+/******************* LinkedList vs. ArrayList ********************************/
+
+/* The most notable difference between the LinkedList and the ArrayList is in the way they store objects.
+The ArrayList is better for storing and accessing data, as it is very similar to a normal array.
+The LinkedList is better for manipulating data, such as making numerous inserts and deletes.
+
+In addition to storing the object, the LinkedList stores the memory address (or link) of the element that follows it. It's called a LinkedList because each element contains a link to the neighboring element.
+
+
+You can use the enhanced for loop to iterate over its elements. */
+
+LinkedList<String> c = new LinkedList<String>();
+c.add("Red");
+c.add("Blue");
+c.add("Green");
+c.add("Orange");
+c.remove("Green");
+
+for(String s: c) {
+  System.out.println(s);
+}
+/* Output:
+Red
+Blue
+Orange
+ */
+
+
+
+
+
+
 
 
 
