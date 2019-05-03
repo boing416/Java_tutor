@@ -349,6 +349,93 @@ enum Rank {
 }
 Rank a = Rank.SOLDIER;
 
+/*************   Java API **************************************************************************
+The Java API is a collection of classes and interfaces that have been written for you to use.
+The Java API Documentation with all of the available APIs can be located on the Oracle website at 
+http://docs.oracle.com/javase/7/docs/api/
+Once you locate the package you want to use, you need to import it into your code.
+The package can be imported using the import keyword.
+For example:
+import java.awt.*;
+
+The awt package contains all of the classes for creating user interfaces and for painting graphics and images.
+The wildcard character (*) is used to import all of the classes in the package.
+*/
+/*************   Exception Handling **************************************************************************/
+public class MyClass {
+  public static void main(String[ ] args) {
+    try {
+      int a[ ] = new int[2];
+      System.out.println(a[5]);
+    } catch (Exception e) {
+      System.out.println("An error occurred");
+    }
+  }
+}
+//Outputs "An error occurred"
+//********************************************throw
+int div(int a, int b) throws ArithmeticException {
+  if(b == 0) {
+    throw new ArithmeticException("Division by Zero");
+  } else {
+    return a / b;
+  }
+}
+
+/*****************************************Exception Handling*/
+
+try {
+  //some code
+} catch (ExceptionType1 e1) {
+  //Catch block
+} catch (ExceptionType2 e2) {
+  //Catch block
+} catch (ExceptionType3 e3) {
+  //Catch block
+}
+/*************   Threads **************************************************************************/
+
+class Loader extends Thread {
+  public void run() {
+    System.out.println("Hello");
+  }
+}
+
+class MyClass {
+  public static void main(String[ ] args) {
+    Loader obj = new Loader();
+    obj.start();
+  }
+}
+/*
+The other way of creating Threads is implementing the Runnable interface.
+Implement the run() method. Then, create a new Thread object, pass the Runnable class to its constructor, and start the Thread by calling the start() method.
+
+
+Example:
+*/
+class Loader implements Runnable {
+  public void run() {
+    System.out.println("Hello");
+  }
+}
+
+class MyClass {
+  public static void main(String[ ] args) {
+    Thread t = new Thread(new Loader());
+    t.start();
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
