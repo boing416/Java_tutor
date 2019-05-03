@@ -506,16 +506,116 @@ Blue
 Orange
  */
 
+/******************* HashMap ********************************/
+
+/*
+Arrays and Lists store elements as ordered collections, with each element given an integer index.
+HashMap is used for storing data collections as key and value pairs. One object is used as a key (index) to another object (the value). 
+The put, remove, and get methods are used to add, delete, and access values in the HashMap.
+
+Example:
+*/
+import java.util.HashMap;
+public class MyClass {
+  public static void main(String[ ] args) {
+    HashMap<String, Integer> points = new HashMap<String, Integer>();
+    points.put("Amy", 154);
+    points.put("Dave", 42);
+    points.put("Rob", 733);
+    System.out.println(points.get("Dave")); 
+  }
+}
+// Outputs 42
+/******************* HashSet ********************************/
+
+/*
+A Set is a collection that cannot contain duplicate elements. It models the mathematical set abstraction.
+One of the implementations of the Set is the HashSet class.
+
+Example:
+*/
+
+import java.util.HashSet;
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    HashSet<String> set = new HashSet<String>();
+    set.add("A");
+    set.add("B");
+    set.add("C");
+    System.out.println(set);
+  }
+}
+//  Output: [A, B, C]
+
+/*
+LinkedHashSet
+
+The HashSet class does not automatically retain the order of the elements as they're added. 
+To order the elements, use a LinkedHashSet, which maintains a linked list of the set's elements in 
+the order in which they were inserted.
+*/
 
 
+/******************* Sorting Lists **************************************************************************/
+
+/*
+For the manipulation of data in different collection types, the Java API provides a Collections class, which is included in the java.util package. 
+One of the most popular Collections class methods is sort(), which sorts the elements of your collection type. The methods in the Collections class are static, 
+so you don't need a Collections object to call them.
+Example:
+*/
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    ArrayList<String> animals = new ArrayList<String>();
+    animals.add("tiger");
+    animals.add("cat");
+    animals.add("snake");
+    animals.add("dog");
+       
+    Collections.sort(animals);
+       
+    System.out.println(animals);
+  }
+}
+/* Outputs:
+[cat, dog, snake, tiger]
+*/
 
 
+/******************* Iterators **************************************************************************/
+/*
+An Iterator is an object that enables to cycle through a collection, obtain or remove elements. 
+Before you can access a collection through an iterator, you must obtain one. Each of the collection classes provides an iterator() method that returns an iterator to the start of the collection. By using this iterator object, you can access each element in the collection, one element at a time.
 
+The Iterator class provides the following methods:
+hasNext(): Returns true if there is at least one more element; otherwise, it returns false.
+next(): Returns the next object and advances the iterator.
+remove(): Removes the last object that was returned by next from the collection.
 
+The Iterator class must be imported from the java.util package.
 
+Example:
+*/
 
+import java.util.Iterator;
+import java.util.LinkedList;
 
+public class MyClass {
+   public static void main(String[ ] args) {
+  LinkedList<String> animals = new LinkedList<String>();
+  animals.add("fox");
+  animals.add("cat");
+  animals.add("dog");
+  animals.add("rabbit");
 
+  Iterator<String> it = animals.iterator();
+  String value = it.next();
+  System.out.println(value);
+}
+}
+//Outputs "fox"
 
 
 
