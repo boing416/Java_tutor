@@ -617,6 +617,98 @@ public class MyClass {
 }
 //Outputs "fox"
 
+//*******************************************Interators loop
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    LinkedList<String> animals = new LinkedList<String>();
+    animals.add("fox");
+    animals.add("cat");
+    animals.add("dog");
+    animals.add("rabbit");
+     
+    Iterator<String> it = animals.iterator();
+    while(it.hasNext()) {
+      String value = it.next();
+      System.out.println(value);   
+     }
+  }
+}
+/*
+fox
+cat
+dog
+rabbit
+*/
+
+
+/******************* Working with Files **************************************************************************/
+
+import java.io.File;
+
+public class MyClass {
+  public static void main(String[ ] args) {
+    File x = new File("C:\\sololearn\\test.txt");
+    if(x.exists()) {
+     System.out.println(x.getName() +  "exists!");
+    }
+    else { 
+     System.out.println("The file does not exist");
+    }
+  }
+}
+
+//////////////Reading a File
+
+try {
+  File x = new File("C:\\sololearn\\test.txt");
+  Scanner sc = new Scanner(x);      
+}
+ catch (FileNotFoundException e) {
+
+}
+/*
+The Scanner class inherits from the Iterator, so it behaves like one.
+We can use the Scanner object's next() method to read the file's contents.
+*/
+try {
+  File x = new File("C:\\sololearn\\test.txt");
+  Scanner sc = new Scanner(x);
+  while(sc.hasNext()) {
+    System.out.println(sc.next());
+  }
+  sc.close();
+} catch (FileNotFoundException e) {
+  System.out.println("Error");
+}
+
+///////////////Creating Files
+import java.util.Formatter;
+
+public class MyClass {
+   public static void main(String[ ] args) {
+  try {
+    Formatter f = new Formatter("C:\\sololearn\\test.txt");
+  } catch (Exception e) {
+      System.out.println("Error");
+  }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
