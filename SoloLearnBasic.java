@@ -217,3 +217,42 @@ int a = (int) 3.14;
 System.out.println(a);
 //Outputs 3
 
+//Upcasting
+Animal a = new Cat();
+//Downcasting
+Animal a = new Cat();
+((Cat)a).makeSound();
+/*************   Anonymous Classes ****************************************************************************/
+
+class Machine {
+  public void start() {
+    System.out.println("Starting...");
+  }
+}
+
+public static void main(String[ ] args) {
+  Machine m = new Machine() {
+    @Override public void start() {
+      System.out.println("Wooooo");
+    }
+  };
+  m.start();
+}
+//Outputs "Wooooo";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
