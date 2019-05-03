@@ -138,3 +138,19 @@ int m = Math.max(10, 20);  // 20
 int m = Math.min(10, 20);  // 10
 
 double p = Math.pow(2, 3); // 8.0
+
+/****************************************Inheritance***********************************/
+
+class Animal {
+  protected int legs;
+  public void eat() {
+    System.out.println("Animal eats");
+  }
+}
+
+class Dog extends Animal {
+  Dog() {
+    legs = 4;
+  }
+}
+
