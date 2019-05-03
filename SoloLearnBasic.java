@@ -46,4 +46,32 @@ class MyClass {
 
 Arrays
 int[ ] arr = new int[5];
+arr[2] = 42;
+String[ ] myNames = { "A", "B", "C", "D"};
+System.out.println(myNames[2]);
+int[ ] intArr = new int[5];
+System.out.println(intArr.length);
+int[ ] primes = {2, 3, 5, 7};
+
+for (int t: primes) {
+   System.out.println(t); 
+}
+
+/*
+2
+3
+5
+7
+*/
+
+class MyClass {
+  public static void main(String[ ] args) {
+    Animal dog = new Animal();
+    dog.bark();
+  }
+}
+// Outputs "Woof-Woof"
+
+
+
 */
