@@ -241,9 +241,40 @@ public static void main(String[ ] args) {
 //Outputs "Wooooo";
 
 
+// Example 2
+class Machine {
+  public void start() {
+    System.out.println("Starting...");
+  }
+}  
+public static void main(String[ ] args) {
+  Machine m1 = new Machine() {
+    @Override public void start() {
+      System.out.println("Wooooo");
+    }
+  };
+  Machine m2 = new Machine();
+  m2.start();
+  }
+//Outputs "Starting..."
 
+/*************   Inner Classes ****************************************************************************/
 
+class Robot {
+  int id;
+  Robot(int i) {
+    id = i;
+    Brain b = new Brain();
+    b.think();
+  }
 
+  private class Brain {
+    public void think() {
+      System.out.println(id + " is thinking");
+    }
+  }
+
+}
 
 
 
