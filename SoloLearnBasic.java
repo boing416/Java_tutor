@@ -140,7 +140,7 @@ int m = Math.min(10, 20);  // 10
 double p = Math.pow(2, 3); // 8.0
 
 /****************************************Inheritance***********************************/
-
+//EXAMPLE 1
 class Animal {
   protected int legs;
   public void eat() {
@@ -153,4 +153,67 @@ class Dog extends Animal {
     legs = 4;
   }
 }
+//EXAMPLE 2
+class A {
+  public A() {
+    System.out.println("New A");
+  }
+}
+class B extends A {
+  public B() {
+    System.out.println("New B");
+  }
+}
+
+class Program {
+  public static void main(String[ ] args) {
+      B obj = new B();
+  }
+}
+/*Outputs
+"New A"
+"New B"
+*/
+/************ abstract class **************************************************************
+
+/* An abstract class is defined using the abstract keyword.
+- If a class is declared abstract it cannot be instantiated (you cannot create objects of that type).
+- To use an abstract class, you have to inherit it from another class.
+- Any class that contains an abstract method should be defined as abstract. */
+
+  abstract class Animal {
+  int legs = 0;
+  abstract void makeSound();
+}
+class Cat extends Animal {
+  public void makeSound() {
+    System.out.println("Meow");
+  }
+}
+/*************   interface ******************************************************************************************
+An interface is a completely abstract class that contains only abstract methods.
+Some specifications for interfaces:
+- Defined using the interface keyword.
+- May contain only static final variables.
+- Cannot contain a constructor because interfaces cannot be instantiated.
+- Interfaces can extend other interfaces.
+- A class can implement any number of interfaces. */
+
+interface Animal {
+  public void eat();
+  public void makeSound();
+}
+
+class Cat implements Animal {
+  public void makeSound() {
+    System.out.println("Meow");
+  }
+  public void eat() {
+    System.out.println("omnomnom");
+  }
+}
+/*************   Type Casting ****************************************************************************/
+int a = (int) 3.14;
+System.out.println(a);
+//Outputs 3
 
